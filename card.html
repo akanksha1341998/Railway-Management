@@ -1,0 +1,86 @@
+<html>
+<head>
+<title>card detail</title>
+<script>
+
+function validateForm() 
+{
+        var a = document.forms["myform"]["type"].value;
+	var b = document.forms["myform"]["un"].value;
+	var c = document.forms["myform"]["vt"].value;
+	var d = document.forms["myform"]["cvv"].value;
+	var e = document.forms["myform"]["noc"].value;
+	
+    if (a == "") {
+        alert("Fill the required field");
+        return false;
+    }
+	
+    if (b == "") {
+        alert("Fill the required field");
+        return false;
+    }
+	 
+    if (c == "") {
+        alert("Fill the required field");
+        return false;
+    }
+ 
+    if (d == "") {
+        alert("Fill the required field");
+        return false;
+    }
+	 
+    if (e == "") {
+        alert("Fill the required field");
+        return false;
+    }
+
+}
+</script>
+</head>
+<body>
+<fieldset style="width:50%">
+<legend><h3>Card Details</h3></legend>
+<table>
+<font size="5">
+<form name="myform" action="confirm.html" method="post" onsubmit="return validateForm()">
+<font color="red">*</font>Required field
+<tr>
+<td><fieldset style="width:80%">
+<legend><h3>Card Type</h3></legend></font>                        
+VISA          <input type="radio" name="type">
+<br>AmEx      <input type="radio" name="type">
+<br>Mastercard<input type="radio" name="type"></fieldset></td>
+</tr>
+
+<tr>
+<td>Card Number<font color="red">*</font></td>
+<td><input type="text" name="un"></td>
+</tr>
+
+<tr>
+<td>Valid Thru<font color="red">*</font></td>
+<td><input type="date" name="vt"></td>
+</tr>
+
+<tr>
+<td>CVV<font color="red">*</font</td>       
+<td><input type="text" name="cvv"></td>
+</tr>
+
+<tr>
+<td>Name on card<font color="red">*</font></td>
+<td><input type="text" name="noc"></td>
+</tr>
+
+<tr>
+<td><input type="submit" value="Proceed" name="done">     <input type="reset" value="Clear" name="cancel"></td>
+
+</tr>
+
+</fieldset>
+</font>
+<table>
+</body>
+</html>

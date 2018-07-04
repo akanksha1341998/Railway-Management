@@ -1,0 +1,60 @@
+<html>
+
+<head>
+<title>login
+</title>
+<script>
+function validateForm()
+{
+  var y=document.forms["myForm"]["Username"].value;
+  if(y == "")
+  {
+    alert("Username must be filled");
+    return false;
+  }
+  var z=document.forms["myForm"]["Password"].value;
+  if(z == "")
+  {
+    alert("Password must be filled");
+    return false;
+  }
+}
+</script>
+</head>
+
+<body>
+<br>
+
+<fieldset style="width:40%;">
+  <legend><B>LOGIN</B></legend>
+  <b><u>Required field</u></b><font color="red">*</font>
+  <br>
+<form name="myForm" action="sample.html" onsubmit="return validateForm()" method="post">
+<table>
+<tr>
+<td>
+<b>Username</b><font color="red">*</font> : &emsp;</td>
+<td><input type="text" name="Username" style="border:1px; border-style: inset;" >
+</td></tr>
+<tr><td>
+<b>Password</b><font color="red">*</font> : &emsp;</td>
+<td><input type="password" name="Password" style="border:1px; border-style: inset;">
+</td></tr>
+<tr>
+<td>
+<p id="demo">
+<input type="submit" value="Login"> 
+</p></td>
+<td>
+<p id="demo">
+<input type="reset" value="Reset">
+</p></td></tr>
+</table>
+</fieldset>
+<h3><b>Don't have an account?</b> <a href="signup.html" target="login">signup</a></h3>
+
+</form>
+
+</body>
+
+</html>
